@@ -3,9 +3,9 @@ package com.softdesign.devintensive.ui.activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-
 import com.softdesign.devintensive.utils.*;
-import com.softdesign.devintensive.R;
+
+import com.softdesign.devintensive.ui.activities.R;
 
 public class MainActivity extends AppCompatActivity {
 
