@@ -25,6 +25,7 @@
 
     <!--CONTACTS DATA-->
     <dimen name="contact_data_height">100dp</dimen>
+    <dimen name="contact_input_font_size">12sp</dimen>
 
 
 
