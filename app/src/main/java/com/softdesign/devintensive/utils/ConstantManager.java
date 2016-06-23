@@ -1,3 +1,4 @@
+/** Управление константами проекта */
 public interface ConstantManager {
-	String PREF_TAG = "DEV_";
+	String PREFFIX_TAG = "DEV_";
 }
