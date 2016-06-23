@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">DevIntensive</string>
+    <string name="app_name">Самарский Никита</string>
+    <string name="rating">Рейтинг</string>
+    <string name="lines_code">Написано строк кода</string>
+    <string name="projects_count">Проектов</string>
+    <string name="user_phone">Мобильный</string>
+    <string name="user_email">E-mail</string>
+    <string name="user_vk">Профиль в VK</string>
+    <string name="user_repo">Репозиторий</string>
+    <string name="user_about">О себе</string>
 </resources>

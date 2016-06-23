@@ -8,4 +8,66 @@
         <item name="colorAccent">@color/color_accent</item>
     </style>
 
+    <!-- HEAD -->
+    <style name="head">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:layout_height">@dimen/head_height</item>
+    </style>
+
+    <style name="head_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="head_item_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/head_item</item>
+    </style>
+
+    <style name="head_vert_line">
+        <item name="android:layout_width">@dimen/head_vert_line_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_light</item>
+        <item name="android:layout_marginTop">@dimen/spacing_normal_16</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_normal_16</item>
+    </style>
+    <!-- END HEAD -->
+
+    <!-- CONTCTS DATA -->
+    <style name="contact_data">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">@dimen/contact_data_height</item>
+    </style>
+
+    <style name="contact_data_descr" parent="contact_data">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="contact_data_img">
+        <item name="android:layout_width">@dimen/size_small_24</item>
+        <item name="android:layout_height">@dimen/size_small_24</item>
+    </style>
+    <style name="contact_data_img_left" parent="contact_data_img">
+        <item name="android:layout_marginLeft">@dimen/size_small_24</item>
+        <item name="android:layout_marginRight">@dimen/spacing_normal_16</item>
+    </style>
+    <style name="contact_data_img_right" parent="contact_data_img">
+        <item name="android:layout_marginRight">@dimen/size_small_24</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_normal_16</item>
+    </style>
+    <style name="contact_input">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- END CONTACTS DATA -->
+
 </resources>

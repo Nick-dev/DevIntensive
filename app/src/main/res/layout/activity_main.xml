@@ -4,14 +4,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.softdesign.devintensive.MainActivity">
+    tools:context="com.softdesign.devintensive.ui.activities.MainActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- HEAD -->
+            <LinearLayout
+                android:id="@+id/head"
+                style="@style/head">
+                <LinearLayout
+                    style="@style/head_item"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/userRating"
+                        style="@style/head_item_text"/>
+                    <TextView
+                        style="@style/head_item_text"
+                        android:text="@string/rating"/>
+                </LinearLayout>
+                <View
+                    style="@style/head_vert_line"></View>
+                <LinearLayout
+                    style="@style/head_item"
+                    android:layout_weight="2">
+                    <TextView
+                        android:id="@+id/userLineCodeCount"
+                        style="@style/head_item_text"/>
+                    <TextView
+                        style="@style/head_item_text"
+                        android:text="@string/lines_code"/>
+                </LinearLayout>
+                <View
+                    style="@style/head_vert_line"></View>
+                <LinearLayout
+                    style="@style/head_item"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/userProjectCount"
+                        style="@style/head_item_text"/>
+                    <TextView
+                        style="@style/head_item_text"
+                        android:text="@string/projects_count"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- END HEAD -->
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <!-- CONTACTS DATA -->
+            <LinearLayout
+                android:id="@+id/contactsData"
+                android:layout_below="@+id/head"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                    <!-- PHONE -->
+                    <LinearLayout style="@style/contact_data">
+                        <ImageView
+                            style="@style/contact_data_img_left"
+                            android:src="@drawable/ic_phone" />
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/contact_input">
+                            <EditText
+                                android:id="@+id/userPhone"
+                                android:hint="@string/user_phone"
+                                style="@style/contact_input"
+                                android:inputType="phone"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            style="@style/contact_data_img_right"
+                            android:src="@drawable/ic_phone_in_talk" />
+                    </LinearLayout>
+
+                    <!-- E-mail -->
+                    <LinearLayout style="@style/contact_data">
+                        <ImageView
+                            style="@style/contact_data_img_left"
+                            android:src="@drawable/ic_letter" />
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/contact_input">
+                            <EditText
+                                android:id="@+id/userEmail"
+                                android:hint="@string/user_email"
+                                style="@style/contact_input"
+                            android:inputType="textEmailAddress"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            style="@style/contact_data_img_right"
+                            android:src="@drawable/ic_send_letter" />
+                    </LinearLayout>
+
+                    <!-- VK -->
+                    <LinearLayout style="@style/contact_data">
+                        <ImageView
+                            style="@style/contact_data_img_left"
+                            android:src="@drawable/ic_vk" />
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/contact_input">
+                            <EditText
+                                android:id="@+id/userVk"
+                                android:hint="@string/user_vk"
+                                style="@style/contact_input"
+                                android:inputType="textUri"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            style="@style/contact_data_img_right"
+                            android:src="@drawable/ic_eye" />
+                    </LinearLayout>
+
+                    <!-- Repository -->
+                    <LinearLayout style="@style/contact_data">
+                        <ImageView
+                            style="@style/contact_data_img_left"
+                            android:src="@drawable/ic_git" />
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/contact_input">
+                            <EditText
+                                android:id="@+id/userGit"
+                                android:hint="@string/user_vk"
+                                style="@style/contact_input"
+                                android:inputType="textUri"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            style="@style/contact_data_img_right"
+                            android:src="@drawable/ic_eye" />
+                    </LinearLayout>
+
+                    <!-- About me -->
+                    <LinearLayout style="@style/contact_data_descr">
+                        <ImageView
+                            style="@style/contact_data_img_left"
+                            android:src="@drawable/ic_person" />
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/contact_input">
+                            <EditText
+                                android:id="@+id/userAbout"
+                                android:hint="@string/user_about"
+                                style="@style/contact_input"
+                                android:inputType="textMultiLine"/>
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+            </LinearLayout>
+            <!-- END CONTACTS DATA -->
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 </RelativeLayout>
