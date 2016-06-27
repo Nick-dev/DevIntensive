@@ -16,4 +16,17 @@
     <dimen name="spacing_large_56">56dp</dimen>
     <dimen name="spacing_larger_72">72dp</dimen>
 
+    <!--Head-->
+    <dimen name="head_height">80dp</dimen>
+    <dimen name="head_vert_line_width">3dp</dimen>
+
+    <!--Head.Fonts-->
+    <dimen name="head_item">16sp</dimen>
+
+    <!--CONTACTS DATA-->
+    <dimen name="contact_data_height">100dp</dimen>
+    <dimen name="contact_input_font_size">12sp</dimen>
+
+
+
 </resources>
