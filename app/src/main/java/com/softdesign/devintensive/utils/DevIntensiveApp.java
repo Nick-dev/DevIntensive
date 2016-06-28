@@ -10,7 +10,7 @@ import android.preference.PreferenceManager;
 public class DevIntensiveApp extends Application {
     private static SharedPreferences sSharedPreferences;
 
-    public SharedPreferences getSharedPreferences()
+    public static SharedPreferences getSharedPreferences()
     {
         return  sSharedPreferences;
     }
