@@ -71,4 +71,9 @@
 
     <!-- END CONTACTS DATA -->
 
+    <!-- Progress dialog activity -->
+    <style name="progress_dlg">
+        <item name="android:fullDark">@android:color/transparent</item>
+    </style>
+
 </resources>
