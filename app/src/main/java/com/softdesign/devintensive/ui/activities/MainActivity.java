@@ -6,9 +6,14 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.softdesign.devintensive.data.managers.DataManager;
 import com.softdesign.devintensive.utils.*;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class MainActivity extends BaseActivity {
 
     private String mTag;
     /** Рейтинг пользователя */
@@ -27,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
     public EditText userGit;
     /** about user */
     public EditText userAbout;
+
+    private Map<String, String> userDataList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +53,34 @@ public class MainActivity extends AppCompatActivity {
         userRating.setText("5");
         userProjectCount.setText("5");
         userLineCodeCount.setText("5");
-        userPhone.setText("8-917-97-77-77");
-        userEmail.setText("email@address.com");
-        userVk.setText("vk.com/id62678003");
-        userGit.setText("github.com/Nick-dev/DevIntensive");
-        userAbout.setText("About me...........................");
+        updateTextInputFields();
+    }
+
+    /** Обновление значений текстовых полей активити загруженными данными */
+    private void updateTextInputFields()
+    {
+        userDataList = DataManager.getInstance().getPreferencesManager().loadUserData();
+        if (userDataList.containsKey(ConstantManager.USER_PHONE_TAG))
+            userPhone.setText(userDataList.get(ConstantManager.USER_PHONE_TAG));
+        if (userDataList.containsKey(ConstantManager.USER_EMAIL_TAG))
+            userEmail.setText(userDataList.get(ConstantManager.USER_EMAIL_TAG));
+        if (userDataList.containsKey(ConstantManager.USER_VK_TAG))
+            userEmail.setText(userDataList.get(ConstantManager.USER_VK_TAG));
+        if (userDataList.containsKey(ConstantManager.USER_GIT_TAG))
+            userEmail.setText(userDataList.get(ConstantManager.USER_GIT_TAG));
+        if (userDataList.containsKey(ConstantManager.USER_ABOUT_TAG))
+            userEmail.setText(userDataList.get(ConstantManager.USER_ABOUT_TAG));
+    }
+
+    /** Сохранение значений текстовых полей активити */
+    private void saveTextInputFields()
+    {
+        userDataList.put(ConstantManager.USER_PHONE_TAG, userPhone.getText().toString());
+        userDataList.put(ConstantManager.USER_EMAIL_TAG, userEmail.getText().toString());
+        userDataList.put(ConstantManager.USER_VK_TAG, userVk.getText().toString());
+        userDataList.put(ConstantManager.USER_GIT_TAG, userGit.getText().toString());
+        userDataList.put(ConstantManager.USER_ABOUT_TAG, userAbout.getText().toString());
+        DataManager.getInstance().getPreferencesManager().saveUserData(userDataList);
     }
 
     @Override
@@ -67,12 +98,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        updateTextInputFields();
         Log.d(mTag, "onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        saveTextInputFields();
         Log.d(mTag, "onPause");
     }
 
