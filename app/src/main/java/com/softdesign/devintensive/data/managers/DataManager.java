@@ -1,17 +1,17 @@
 package com.softdesign.devintensive.data.managers;
 
-import android.preference.PreferenceManager;
+import android.content.Context;
 
 /**
  * Created by nick on 28.06.16.
  */
 public class DataManager {
     private static  DataManager Instance = null;
-    private PreferenceManager mPreferenceManager;
+    private PreferencesManager mPreferencesManager;
 
     public DataManager()
     {
-        this.mPreferenceManager = new PreferenceManager();
+        this.mPreferencesManager = new PreferencesManager();
     }
 
     /** Get instance of DataManager class */
@@ -22,9 +22,9 @@ public class DataManager {
         return Instance;
     }
 
-    public PreferenceManager getPreferenceManager()
+    public PreferencesManager getPreferencesManager()
     {
-        return this.mPreferenceManager;
+        return this.mPreferencesManager;
     }
 
 }
